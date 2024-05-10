@@ -1,3 +1,3 @@
-public class Sensor {
+public class SensorPeso {
     
 }
