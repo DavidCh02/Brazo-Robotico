@@ -1,5 +1,5 @@
 # BRAZO ROBOTICO
-Link: https://davidch02.github.io/index.html
+#### Link Pagina web: https://davidch02.github.io/index.html
 ### Iniciativa
 
 Este proyecto comenzó debido a una necesidad existente en nuestro campo de estudio, la acumulación de basura o afecta la estética y el ambiente del campus universitario también tiene implicaciones negativas para la salud pública y el medio ambiente. La necesidad de un sistema eficiente y semi automatizado para la recolección de residuos que es crucial para mantener un entorno limpio y sostenible.
