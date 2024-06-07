@@ -5,13 +5,21 @@ Este proyecto comenzó debido a una necesidad existente en nuestro campo de estu
 
 #TeleRobot
 ##### Diagrama UML
-
-**Table of Contents**
 ![Brazo](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/d178f37d-4fa4-45cf-93cb-8307f192e7fd)
+**Table of Contents**
+
 
 [TOCM]
 
 [TOC]
+
+-----------------------------------------------------------------------------
+### Requerimientos del sistema
+- Conexión y desconexión del control remoto: El sistema debe permitir a los usuarios conectar y desconectar el control remoto de forma inalámbrica a través de Wi-Fi y Bluetooth.
+- Control del brazo robótico: El sistema debe permitir a los usuarios controlar el brazo robótico para realizar tareas específicas, como mover la base, el brazo, el antebrazo y la pinza.
+- Transmisión de vídeo: Si el sistema utiliza la cámara ESP32-CAM, puede ser un requerimiento transmitir vídeo en tiempo real desde la cámara a una ubicación remota.
+- Análisis de residuos: Si el sistema incluye un componente de análisis de residuos, puede ser necesario registrar los residuos analizados, almacenar datos relacionados con esos residuos y proporcionar funciones para consultar y analizar esos datos.
+- Medición de peso: Si el sistema incluye un sensor de peso, puede ser necesario medir y registrar el peso de los objetos colocados en una balanza.
 
 -----------------------------------------------------------------------------
 ## Caso de uso
