@@ -6,12 +6,7 @@ Este proyecto comenzó debido a una necesidad existente en nuestro campo de estu
 #TeleRobot
 ##### Diagrama UML
 ![Brazo](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/d178f37d-4fa4-45cf-93cb-8307f192e7fd)
-**Table of Contents**
 
-
-[TOCM]
-
-[TOC]
 
 -----------------------------------------------------------------------------
 ### Requerimientos del sistema
@@ -84,3 +79,15 @@ Acción: El sistema notificará al usuario y pedirá que el objeto sea recolocad
 ##### Interfaz de Hardware:
 - Conexiones entre el ESP32-CAM, el sensor de peso, WIFI, y el módulo Bluetooth con el brazo robótico.
 - Fuente de alimentación adecuada para todos los componentes.
+-------------
+## Capturas
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/908a4441-c63d-4ca4-aa03-3c819c0bc512)
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/bfdb9ec5-e06d-4aa1-aa87-175ff044222e)
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/e9ea588a-3f66-4a57-9b6a-1e2936964dc4)
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/2e07e837-cb01-408f-a729-70b7d7963a40)
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/76073647-7242-4520-b0cb-668c4de57f55)
+![image](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/f55f162e-4cee-4d64-a38f-35439d60a862)
+
+
+
+
