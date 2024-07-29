@@ -1,4 +1,5 @@
 # BRAZO ROBOTICO
+
 #### Link Pagina web: https://davidch02.github.io/index.html
 #### Link a repositorio de la pagina web: https://github.com/DavidCh02/DavidCh02.github.io.git
 ### Iniciativa
@@ -7,8 +8,7 @@ Este proyecto comenzó debido a una necesidad existente en nuestro campo de estu
 
 #TeleRobot
 ##### Diagrama UML
-![Brazo](https://github.com/DavidCh02/Brazo-Robotico/assets/166523123/d178f37d-4fa4-45cf-93cb-8307f192e7fd)
-
+![Brazo Robotico](https://github.com/user-attachments/assets/26da564e-3a37-4357-8503-f5221fa2b3c8)
 
 -----------------------------------------------------------------------------
 ### Requerimientos del sistema
