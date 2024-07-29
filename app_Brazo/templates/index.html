@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Brazo Robótico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}">
+    <script>
+        let controlEnabled = false;
+        let videoVisible = false;
+
+        function streamVideo() {
+            const videoDiv = document.getElementById('videoDiv');
+            if (videoVisible) {
+                videoDiv.style.display = 'none';
+                videoVisible = false;
+            } else {
+                fetch('/stream_video/')
+                .then(response => response.text())
+                .then(data => {
+                    videoDiv.innerHTML = data;
+                    videoDiv.style.display = 'block';
+                    videoVisible = true;
+                }).catch(error => {
+                    console.error('Error al obtener la transmisión de video:', error);
+                    videoDiv.innerHTML = '<p>Error al cargar el video</p>';
+                });
+            }
+        }
+
+        function moveServo(servo, angle) {
+            if (controlEnabled) {
+                angle = Math.max(0, Math.min(180, angle));
+                fetch(`/move_servo/?servo=${servo}&angle=${angle}`)
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                }).catch(error => {
+                    console.error('Error al mover el servomotor:', error);
+                });
+            }
+        }
+
+        function updateServo(servo, angle) {
+            if (controlEnabled) {
+                angle = Math.max(0, Math.min(180, parseInt(angle)));
+                document.getElementById(`${servo}-slider`).value = angle;
+                document.getElementById(`${servo}-value`).textContent = `Ángulo: ${angle}°`;
+                moveServo(servo, angle);
+            }
+        }
+
+        function startControl() {
+            controlEnabled = true;
+            console.log('Control de servomotores iniciado');
+        }
+
+        function stopControl() {
+            controlEnabled = false;
+            console.log('Control de servomotores detenido');
+        }
+
+        window.onload = function() {
+            document.querySelectorAll('.servo-control').forEach(function(element) {
+                let initialAngle = 0;
+                document.getElementById(`${element.id}-slider`).value = initialAngle;
+                document.getElementById(`${element.id}-value`).textContent = `Ángulo: ${initialAngle}°`;
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="video-section">
+            <h1>Transmisión de la Cámara</h1>
+            <button onclick="streamVideo()">Visualizar Video</button>
+            <div id="videoDiv" class="video-container"></div>
+        </div>
+
+        <div class="control-panel">
+            <h2>Control de Servomotores</h2>
+            <div class="control-buttons">
+                <button onclick="startControl()">Iniciar Control</button>
+                <button onclick="stopControl()">Detener Control</button>
+            </div>
+
+            <div class="servo-control" id="base">
+                <h3>Base</h3>
+                <input type="range" id="base-slider" min="0" max="180" value="0" oninput="updateServo('base', this.value)">
+                <p id="base-value">Ángulo: 0°</p>
+                <input type="number" min="0" max="180" value="0" oninput="updateServo('base', this.value)">
+            </div>
+
+            <div class="servo-control" id="brazo">
+                <h3>Brazo</h3>
+                <input type="range" id="brazo-slider" min="0" max="180" value="0" oninput="updateServo('brazo', this.value)">
+                <p id="brazo-value">Ángulo: 0°</p>
+                <input type="number" min="0" max="180" value="0" oninput="updateServo('brazo', this.value)">
+            </div>
+
+            <div class="servo-control" id="antebrazo">
+                <h3>Antebrazo</h3>
+                <input type="range" id="antebrazo-slider" min="0" max="180" value="0" oninput="updateServo('antebrazo', this.value)">
+                <p id="antebrazo-value">Ángulo: 0°</p>
+                <input type="number" min="0" max="180" value="0" oninput="updateServo('antebrazo', this.value)">
+            </div>
+
+            <div class="servo-control" id="pinza">
+                <h3>Pinza</h3>
+                <input type="range" id="pinza-slider" min="0" max="180" value="0" oninput="updateServo('pinza', this.value)">
+                <p id="pinza-value">Ángulo: 0°</p>
+                <input type="number" min="0" max="180" value="0" oninput="updateServo('pinza', this.value)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

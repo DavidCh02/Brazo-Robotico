@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between the video and control sections */
+    align-items: flex-start;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-section, .control-panel {
+    padding: 15px; /* Reduced padding for a more compact layout */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px; /* Reduced max-width for a more compact control panel */
+}
+
+.servo-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 180px; /* Further reduced width for smaller controls */
+    margin: 5px 0; /* Maintain compact layout */
+}
+
+.servo-control input[type="range"] {
+    width: 100%;
+    margin-bottom: 4px; /* Reduced margin for a tighter layout */
+}
+
+.servo-control p {
+    margin: 2px 0; /* Further reduced margin for a tighter layout */
+    font-size: 12px;
+}
+
+.control-buttons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#videoDiv {
+    width: 320px;
+    height: 240px;
+    background-color: black;
+    margin-top: 10px;
+    display: none;
+}
+
+.servo-control input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 4px; /* Reduced margin for compact layout */
+    font-size: 12px;
+}
