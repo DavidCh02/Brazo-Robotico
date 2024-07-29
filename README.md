@@ -1,6 +1,6 @@
 # BRAZO ROBOTICO
 
-#### Link Pagina web: https://davidch02.github.io/index.html
+#### Link Pagina web: https://davidch02.github.io/
 #### Link a repositorio de la pagina web: https://github.com/DavidCh02/DavidCh02.github.io.git
 ### Iniciativa
 
